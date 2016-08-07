@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-image: url(images/1.jpg);
+        }
+        #mask {
+            background-color:  rgba(255,255,255,0.2);
+            height: 200px;
+            text-align: center;
+        }
+        #mask img {
+            width: 200px;
+            margin-top: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="mask">
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+</div>
+
+<script>
+    var imgs = document.getElementById("mask").children;
+
+    for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        img.onclick = function () {
+            console.log(this.src);
+            var src = this.src.substring(this.src.indexOf("images"));
+            document.body.style.backgroundImage = "url("+src+")";
+        }
+
+    }
+</script>
+</body>
+</html>

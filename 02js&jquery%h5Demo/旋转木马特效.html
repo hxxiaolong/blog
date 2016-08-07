@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转木马轮播图</title>
+    <link rel="stylesheet" href="css/a.css"/>
+    <script src="common.js"></script>
+</head>
+<body>
+<div class="wrap" id="wrap">
+    <div class="slide" id="slide">
+        <ul>
+            <li><a href="#"><img src="images/slidepic1.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/slidepic2.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/slidepic3.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/slidepic4.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/slidepic5.jpg" alt=""/></a></li>
+        </ul>
+        <div class="arrow" id="arrow">
+            <a href="javascript:;" class="prev" id="arrLeft"></a>
+            <a href="javascript:;" class="next" id="arrRight"></a>
+        </div>
+    </div>
+</div>
+<script>
+    var slide = my$("slide");
+    var wrap = my$("wrap");
+    var ul = slide.children[0];
+    var lis = ul.children;
+    var arrow = my$("arrow");
+    var arrLeft = my$("arrLeft");
+    var arrRight = my$("arrRight");
+//定义节流阀
+    var flag = true;
+
+    var config = [
+        {
+            "width": 400,
+            "top": 20,
+            "left": 50,
+            "opacity": 0.2,
+            "zIndex": 2
+        },//0
+        {
+            "width": 600,
+            "top": 70,
+            "left": 0,
+            "opacity": 0.8,
+            "zIndex": 3
+        },//1
+        {
+            "width": 800,
+            "top": 100,
+            "left": 200,
+            "opacity": 1,
+            "zIndex": 4
+        },//2
+        {
+            "width": 600,
+            "top": 70,
+            "left": 600,
+            "opacity": 0.8,
+            "zIndex": 3
+        },//3
+        {
+            "width": 400,
+            "top": 20,
+            "left": 750,
+            "opacity": 0.2,
+            "zIndex": 2
+        }//4
+    ];//其实就是一个配置单 规定了每张图片的大小位置层级透明度
+
+
+    assign();
+    //遍历每一个lis为每一个li赋值
+    function assign() {
+        for (var i = 0; i < lis.length; i++) {
+            var obj = lis[i];
+            animate.animateJson(obj, config[i], function () {
+                //如果动画全部执行完毕，将节流阀恢复
+                flag = true;
+            });
+        }
+    }
+
+
+    wrap.onmouseover = function () {
+        animate.animateJson(arrow, {"opacity": 1});
+    }
+
+    wrap.onmouseout = function () {
+        animate.animateJson(arrow, {"opacity": 0});
+    }
+
+    arrRight.onclick = function () {
+        //右键被单击，最后一个移到第一个
+        if(flag){
+            //每当被单击一次，节流阀置为
+            flag = false;
+            config.unshift(config.pop());
+            assign();
+        }
+
+    }
+
+    arrLeft.onclick = function () {
+        //左键被单击，第一个移到最后一个
+        if(flag){
+            //每当被单击一次，节流阀置为
+            flag = false;
+            config.push(config.shift());
+            assign();
+        }
+
+    }
+</script>
+</body>
+</html>

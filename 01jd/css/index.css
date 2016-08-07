@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+/*中间部分开始*/
+/*nav部分开始*/
+.nav{
+    height: 44px;
+    border-bottom: 2px solid #B1191A;
+}
+
+.nav .catagories{
+    float: left;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.catagories-dt a{
+
+    display: block;
+    width: 200px;
+    height: 44px;
+    padding-left: 10px;
+    font: 400 15px/44px "microsoft yahei";
+    background-color: #B1191A;
+    color: #fff;
+}
+
+.catagories .catagories-dd{
+    margin-top: 2px;
+    border-left: 1px solid #B61D1D;
+}
+
+.catagories-dd .catagories-item {
+    width: 199px;
+    height: 31px;
+    padding-left: 10px;
+    background-color: #C81623;
+    position: relative;
+
+}
+
+.catagories-dd .catagories-item a {
+    font: 400 14px/31px "microsoft yahei";
+    color: #FFF;
+}
+
+.catagories-dd i {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    font: 400 9px/14px consolas;
+    color: #FFF;
+}
+
+.nav .navitems{
+    float: left;
+    width: 620px;
+    height: 44px;
+}
+
+.navitems li{
+    float:left;
+}
+
+.navitems li a{
+    display: block;
+    padding: 0 20px;
+    line-height: 44px;
+    font: 400 15px/44px "microsoft yahei";
+
+}
+
+.navitems .qqg{
+    position: absolute;
+    width: 36px;
+    height: 18px;
+    margin-left:-18px;
+    background:url("../images/znq.jpeg") no-repeat;
+}
+
+.nav .treasure{
+    float:right;
+}
+
+.banner411{
+    position: relative;
+
+}
+
+.banner411 a{
+    position: absolute;
+    width: 100%;
+    height: 662px;
+    background: url(../images/banner.jpg) center no-repeat;
+}
+.main{
+    margin-top: 13px;
+    position: relative;
+}
+
+.main .slide{
+    margin-left: 220px;
+    float: left;
+    background-color: blueviolet;
+    width: 730px;
+    height: 452px;
+    position: relative;
+}
+
+
+
+.slide .circle{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -64px;
+    height: 18px;
+    list-style: none;
+}
+
+.slide .circle li{
+
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+    text-align: center;
+    line-height: 18px;
+    background-color: #3E3E3E;
+    border-radius: 9px;
+    color: #fff;
+
+}
+
+.slide .circle .current{
+    background-color: #B61B1F;
+}
+
+.slide .arrow a{
+    width: 28px;
+    height: 62px;
+    background-color: rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    font:400 22px/62px "simsun";
+    text-align: center;
+    color: #fff;
+}
+
+.slide .arrow-l{
+    left: 0;
+}
+
+.slide .arrow-r{
+    right: 0;
+}
+
+.main .extra{
+    margin-left: 10px;
+    float: left;
+}
+
+.main .extra .news{
+    width: 248px;
+    height: 163px;
+    border: 1px solid #E4E4E4;
+}
+
+.extra .news .mt{
+    width: 218px;
+    height: 32px;
+    padding: 0 15px;
+    border-bottom: 1px dotted #E8E8E7;
+}
+
+.extra .news .mt h2{
+    float: left;
+    font: 400 16px/32px "microsoft yahei";
+    color: #666;
+}
+
+.extra .news .mt a{
+    float: right;
+    line-height: 32px;
+}
+
+
+.extra .news .mc{
+    padding: 7px 0 0 15px;
+
+
+}
+
+.extra .news .mc ul{
+    line-height: 24px;
+}
+
+.extra .news .mc span{
+    font-weight: 700;
+    margin-right: 5px;
+
+}
+
+.main .extra .lefe-ser{
+    width: 248px;
+    height: 208px;
+    border: 1px solid #E4E4E4;
+    border-top: 0;
+    overflow: hidden;
+
+}
+
+.main .extra .lefe-ser ul{
+    width: 252px;
+}
+
+.main .extra .lefe-ser ul li{
+    float: left;
+    border-right: 1px solid #E8E8E7;
+    border-bottom: 1px solid #E8E8E7;
+}
+
+.lefe-ser ul li a{
+    display: block;
+    width: 62px;
+    height: 30px;
+    padding-top: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.lefe-ser ul li a i{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    background: url(../images/life-serv.png) 0 0 no-repeat;
+}
+
+.main .extra .right-pic{
+    margin-top: 3px;
+}
+
+
+/*nav部分结束*/
+/*中间部分结束*/
+
+.today{
+    height: 151px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.today .mt{
+    float: left;
+
+}
+
+.today .md{
+    float: left;
+    width: 1000px;
+
+}
+
+.today .wrap{
+    overflow: hidden;
+}
+.today .md ul{
+    width: 6000px;
+
+}
+
+.today .md li{
+    float: left;
+    margin-right: 1px;
+}
+
+.erweima{
+    border:1px solid #D9D9D9 ;
+    margin:100px auto;
+    position: absolute;
+    width: 82px;
+    z-index: 10;
+    top:-75px;
+    right: -61px;
+
+}
+#x{
+    display: block;
+    /*border:1px solid #D9D9D9 ;*/
+    width:14px;
+    height:14px;
+    float: right;
+    line-height: 14px;
+    color: #D6D6D6;
+    cursor:pointer;
+    position: absolute;
+    top:0;
+    left: 72px;
+}

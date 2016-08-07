@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>好未来教育
+    </title>
+
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: yellow;
+            font-size: 16px;
+            font-family: "Microsoft YaHei", sans-serif; /*第二个是手机的一个默认的字体*/
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            background: url("images/bg.jpg");
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #fff;
+        }
+
+        [class*=ani] {
+            display: block;
+            width: 100%;
+            height: 33.3333%;
+        }
+
+        .s_1_p2, .s_3_p2 {
+            margin-top: -12px;
+            position: absolute;
+        }
+
+        .s_2_p3, .s_1_wenzi, .s_3_text {
+            overflow: auto;
+        }
+
+        .s_3_text {
+            width: 100%;
+            height: 125px;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        audio {
+            width: 100%;
+            position: absolute;
+            z-index: 10000;
+        }
+
+        .welcome{
+            font-size:60px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            margin-top:-150px;
+            margin-left: -30px;
+
+        }
+    </style>
+</head>
+<body>
+<audio src="bg.mp3" preload="preload" id="car_audio"></audio>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide ">
+            <div class="welcome">
+                <p class="ani" swiper-animate-effect="pulse" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">向</p>
+                <p class="ani" swiper-animate-effect="wobble" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">下</p>
+                <p class="ani" swiper-animate-effect="shake" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">滑</p>
+                <p class="ani" swiper-animate-effect="rubberBand" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">动</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="s_1_p1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.5s" src="images/1.png">
+            <img class="s_1_p2 ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="1s" src="images/s2-i3.png">
+
+            <div class="ani s_1_wenzi" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s"
+                 swiper-animate-delay="1.5s">&nbsp;&nbsp;&nbsp;&nbsp;3月21日，世界上最大的传播集团WPP旗下市场调研机构华通明略（Millward Brown）,
+                正式发布2016年度BrandZ“最具价值中国品牌100强”榜单, 好未来（学而思母公司）入选中国品牌价值增长最快的教育类企业，这也是好未来连续三年上榜。此次BrandZ榜单百强包括腾讯、中国移动。
+            </div>
+            <img class="s_1_p3 ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="1.5s" src="images/flower.png"></img>
+        </div>
+        <div class="swiper-slide">
+            <img class="s_2_p1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="0.3s" src="images/aaaw.png">
+            <img class="s_2_p2 ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.8s"
+                 swiper-animate-delay="1.3s" src="images/1.png">
+
+            <p class="s_2_p3 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.8s"
+               swiper-animate-delay="2s">&nbsp;&nbsp;&nbsp;&nbsp;根据BrandZ“2016年最具价值中国品牌100强”最新排名显示，尽管中国经济增速趋缓，中国最具价值100强企业的品牌总价值年度同比增长了13%。好未来在2016年保持33%的品牌价值高速增长。好未来的品牌故事可谓传奇。其前身学而思诞生于2003年，几个大学生学业之余兼职做家教班，非典期间为更好的服务学生和家长搭建学习网站aoshu.com。</p>
+        </div>
+        <div class="swiper-slide">
+            <img class="s_3_p1 ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="1.5s"
+                 swiper-animate-delay="0.2s" src="images/bbb.jpg">
+            <img class="s_3_p2 ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.6s"
+                 swiper-animate-delay="1.2s" src="images/s1.png">
+            <img class="s_3_text ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.6s"
+                 swiper-animate-delay="1.6s" src="images/aaaw.png">
+            <img class="s_3_p3 ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.8s"
+                 swiper-animate-delay="2.5s" src="images/4.png">
+        </div>
+    </div>
+
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+</div>
+</body>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        keyboardControl: true,
+        mousewheelControl: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+
+    })
+
+
+    /*音乐*/
+    var audio = $('#car_audio');
+    var isPlaying = false;
+    function playAudio() {
+        var audio = $('#car_audio');
+        if (audio.attr('src') == undefined) {
+            audio.attr('src', audio.data('src'));
+        }
+        audio[0].play();
+        isPlaying = true;
+    }
+    $(function(){
+        playAudio();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                network = e.err_msg.split(":")[1];  //结果在这里
+                playAudio();
+            });
+        }, false);
+    })
+</script>
+</body>
+</html>

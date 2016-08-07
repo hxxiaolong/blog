@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 350px;
+            height: 350px;
+            margin: 100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .big {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+
+        .mask {
+            width: 175px;
+            height: 175px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+
+        .small {
+            position: relative;
+        }
+
+        .box img {
+            vertical-align: top;
+        }
+
+        #bigImg {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="small">
+        <img src="images/001.jpg" width="350" alt=""/>
+
+        <div class="mask" id="mask"></div>
+    </div>
+    <div class="big">
+        <img src="images/0001.jpg" width="800" alt="" id="bigImg"/>
+    </div>
+</div>
+
+<script>
+    var box = document.getElementById("box");
+    var mask = document.getElementById("mask");
+    var bigImg = document.getElementById("bigImg");
+    var smallbox = box.children[0];
+    var bigbox = box.children[1];
+
+    //当鼠标出现的时候，遮罩和大图出现
+    smallbox.onmouseover = function () {
+        mask.style.display = "block";
+        bigbox.style.display = "block";
+
+    }
+
+    smallbox.onmouseout = function () {
+        mask.style.display = "none";
+        bigbox.style.display = "none";
+    }
+
+    smallbox.onmousemove = function (e) {
+        //遮罩随着鼠标移动
+        var event = e || window.event;
+        //鼠标的位置=鼠标的当前在页面中的距离-盒子距离页面的距离
+        var mouseX = (event.pageX || event.clientX + document.documentElement.scrollLeft) - box.offsetLeft;
+        var mouseY = (event.pageY || event.clientY + document.documentElement.scrollTop) - box.offsetTop;
+
+        //计算遮罩的最正确位置，是鼠标位置的宽高-去一半
+        var maskLeft = mouseX - (mask.offsetWidth / 2);
+        var maskTop = mouseY - (mask.offsetHeight / 2);
+        mask.style.left = maskLeft + "px";
+        mask.style.top = maskTop + "px";
+
+        //计算遮罩的不可达
+        if (maskLeft < 0) {
+            mask.style.left = 0 + "px";
+        }
+        if (maskLeft > smallbox.offsetWidth - mask.offsetWidth) {
+            mask.style.left = smallbox.offsetWidth - mask.offsetWidth + "px";
+        }
+
+        if (maskTop < 0) {
+            mask.style.top = 0 + "px";
+        }
+        if (maskTop > smallbox.offsetHeight - mask.offsetHeight) {
+            mask.style.top = smallbox.offsetHeight - mask.offsetHeight + "px";
+        }
+
+        //计算大图的位置和小图1：2的位置移动
+        bigImg.style.left = -maskLeft * 2 + "px";
+        bigImg.style.top = -maskTop * 2 + "px";
+    }
+
+</script>
+</body>
+</html>

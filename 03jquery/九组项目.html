@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <link rel="stylesheet" href="js/jquery.fullPage.css"/>
+
+    <script>
+        $(function () {
+            $("#fullpage").fullpage({
+                sectionsColor: ['#ccc', "#fff", '#FFFFFF', "#fff", "#D5CDCA", "#E1ECE6", '#778899', '#B5A37B', "#6D625F"],
+                navigation: true,
+                slidesNavigation: true,
+                navigationTooltips: ['bxl', "intro", 'sxy', 'fxr', 'hq', 'ctt', 'jzp', 'wqOrzsx', 'hsj'],
+                afterLoad: function (a,index) {
+                    //当执行完某一页要调用的函数，
+                    //如果当前的section是第二页，或者是index-1页，也就是确定当前页
+                    if($(".section").eq(index-1)){
+                        //先移除之前的动画，再添加新的动画
+                        $(".section .introduce .content").removeClass("current");
+                        setTimeout(function () {
+                            $(".section .introduce .content").addClass("current");
+                        },1000);
+
+                    }
+                }
+            });
+
+            setInterval(function () {
+                $.fn.fullpage.moveSlideRight();
+            }, 2000);
+
+
+        });
+    </script>
+    <!--fxr开始-->
+    <link rel="stylesheet" href="css/flower.css"/>
+    <script src="js/flower.js"></script>
+    <!--fxr结束-->
+
+    <!--jzp开始-->
+    <link rel="stylesheet" href="css/jzp.css"/>
+    <script src="js/jzp.js"></script>
+    <!--jzp结束-->
+
+    <!--sxy开始-->
+    <link rel="stylesheet" href="css/sxy_base.css">
+    <link rel="stylesheet" href=css/baguettebox.min.css>
+    <link rel="stylesheet" href="css/lrtk.css">
+    <script src=js/baguettebox.min.js></script>
+    <!--sxy结束-->
+
+    <!--ctt开始-->
+    <link rel="stylesheet" href="css/css-chen.css">
+    <link rel="stylesheet" href=css/base-chen.css>
+    <script src=js/js-chen.js></script>
+    <!--ctt结束-->
+
+    <!--hq开始-->
+    <link rel="stylesheet" href="css/one-screen.css">
+    <script src=js/one-screen.js></script>
+    <!--hq结束-->
+
+
+    <!--hsj开始-->
+    <link rel="stylesheet" href="css/hsj.css">
+    <script src=js/hsj.js></script>
+    <!--hsj结束-->
+
+    <!--wqOrzsx开始-->
+    <link rel="stylesheet" href="css/bld.css">
+    <link rel="stylesheet" href="css/foot-info.css">
+    <script src=js/bldwq.js></script>
+    <script src=js/foot-info.js></script>
+    <!--wqOrzsx结束-->
+
+    <!--introdce开始-->
+    <link rel="stylesheet" href="css/introduce.css">
+    <!--introdce结束-->
+
+
+</head>
+<body>
+
+<div id="fullpage">
+    <div class="section" id="one">
+        <div class="slide"><img src="images/bxl/1.jpg" alt=""/></div>
+        <div class="slide"><img src="images/bxl/2.jpg" alt=""/></div>
+        <div class="slide"><img src="images/bxl/3.jpg" alt=""/></div>
+        <div class="slide"><img src="images/bxl/4.jpg" alt=""/></div>
+        <div class="slide"><img src="images/bxl/5.jpg" alt=""/></div>
+    </div>
+    <div class="section" id="nine">
+        <div class="introduce">
+            <img src="images/introduce.jpg" alt=""/>
+
+            <div class="content">
+                <h1 id="title">MiLan Wedding Show</h1>
+
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of
+                    letters, as opposed to using 'Content here, content here', making it look like readable English.
+                </p>
+
+                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text
+                    , and a
+                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                    evolved
+                    over the years, sometimes by accident, sometimes on purpose, There are many variations of passages
+                    of Lorem
+                    Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+                    randomised
+                    words which don't look even slightly believable. If you are going to
+
+                </p>
+
+                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text
+                    , and a
+                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                    evolved
+                    over the years, sometimes by accident, sometimes on purpose, There are many variations of passages
+                    of Lorem
+                    Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+                    randomised
+                    words which don't look even slightly believable. If you are going to
+
+                </p>
+
+                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text
+                    , and a
+                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                    evolved
+                    over the years, sometimes by accident, sometimes on purpose, There are many variations of passages
+                    of Lorem
+                    Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+                    randomised
+                    words which don't look even slightly believable. If you are going to
+
+                </p>
+
+                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text
+                    , and a
+                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                    evolved
+
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="section" id="three">
+        <div class="sxy">
+            <div class="baguetteBoxOne gallery">
+                <a href="images/big/01.jpg" data-caption="Golden Gate Bridge"><img src="images/small/1-1.jpg"></a>
+                <a href="images/big/02.jpg" title="Midnight City"><img src="images/small/1-2.jpg"></a>
+                <a href="images/big/03.jpg"><img src="images/small/1-3.jpg"></a>
+                <a href="images/big/04.jpg"><img src="images/small/1-4.jpg"></a>
+                <a href="images/big/05.jpg"><img src="images/small/1-5.jpg"></a>
+                <a href="images/big/06.jpg"><img src="images/small/1-6.jpg"></a>
+                <a href="images/big/07.jpg"><img src="images/small/1-7.jpg"></a>
+                <a href="images/big/08.jpg"><img src="images/small/1-8.jpg"></a>
+            </div>
+
+            <script>
+                baguetteBox.run('.baguetteBoxOne', {
+                    animation: 'fadeIn',
+                });
+            </script>
+
+            <div class="service">
+
+                <ul>
+
+                    <li><a href="" title="米兰婚纱摄影 仙女湖独家外景拍摄韩式婚纱照 婚纱摄影工作室" target="_blank">
+                        <div>
+                            <img alt="米兰婚纱摄影 仙女湖独家外景拍摄韩式婚纱照 婚纱摄影工作室" src="images/20150705175814507.jpg"/>
+                        </div>
+                        <span>米兰婚纱摄影仙女湖独家外景拍摄</span>
+                        <i>Milan wedding</i>
+                        <b>3888<em>RMB</em></b>
+                    </a>
+                    </li>
+                    <li><a href="#" title="中国最美乡村婺源油菜花古镇婚纱照团购活动" target="_blank">
+                        <div>
+                            <img alt="中国最美乡村婺源油菜花古镇婚纱照团购活动" src="images/20150705180239003.jpg"/></div>
+                        <span>中国最美乡村婺源油菜花古镇婚纱照</span><i>Milantg</i><b>4999<em>RMB</em></b></a></li>
+
+
+                    <li><a href="#" title="厦门3天2夜旅游拍摄天猫聚划算4399" target="_blank">
+                        <div>
+                            <img alt="厦门3天2夜旅游拍摄天猫聚划算4399" src="images/20150705175814507.jpg"/></div>
+                        <span>厦门3天2夜旅游拍摄天猫聚划算439</span><i>Xiamen tourism photography Tmall poly cost-effective</i><b>4399<em>RMB</em></b></a>
+                    </li>
+
+
+                    <li><a href="#" title="厦门至尊3天2晚拍摄套系" target="_blank">
+                        <div>
+                            <img alt="厦门至尊3天2晚拍摄套系" src="images/20150705175916948.jpg"/></div>
+                        <span>厦门至尊3天2晚拍摄套系</span><i>Xiamen Zhizun 3 days 2 nights of filming the series</i><b>7999<em>RMB</em></b></a>
+                    </li>
+
+
+                    <li><a href="#" title="三亚3天2夜婚纱旅游摄影" target="_blank">
+                        <div>
+                            <img alt="三亚3天2夜婚纱旅游摄影" src="images/20150705175938770.jpg"/></div>
+                        <span>三亚3天2夜婚纱旅游摄影</span><i>Sanya 3 days 2 nights Wedding Travel
+                        Photography</i><b>4999<em>RMB</em></b></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="five">
+        <div class="fxr">
+            <nav id="main_nav" class="border_bottom">
+                <ul class="navigation">
+                    <li class="first_child_menu"><a href="#">Flowers</a></li>
+                </ul>
+            </nav>
+
+            <div id="container_page">
+                <!-- The top of the page containing the news and an left images -->
+                <div id="top_item">
+                    <img class="float_left w53" src="images/box1-top.png" alt="insert the text here"/>
+                    <!-- box of the news -->
+                    <article id="news">
+                        <a href="#">
+                            <img class="important_news" src="images/news.png" alt="icone news">
+
+                            <img class="intro" src="images/intro.jpg" alt="news">
+
+                            <h3 class="subtitle" style="color: grey;font-size: 15px">flowers info</h3>
+
+                            <h1 class="title" style="color: grey;font-size: 15px">Wedding's flowers</h1>
+
+                            <h3 style="color: grey;font-size: 15px">捧花介绍</h3>
+                        </a>
+                    </article>
+                    <div class="clear"></div>
+                    <!-- end of the box of the news -->
+                </div>
+            </div>
+
+
+            <div class="pic-container">
+                <div class="container" id="containerOne">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>粉嫩蜜桃橘色捧花</p>
+                    </div>
+                    <img src="images/flowers1.png" width="150" height="140"/>
+
+                </div>
+
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>莓果蔬食点缀捧花</p>
+                    </div>
+                    <img src="images/flowers2.png" width="150" height="140"/>
+
+                </div>
+
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>飘逸长绸带捧花</p>
+                    </div>
+                    <img src="images/flowers3.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>手捧绑带式捧花</p>
+                    </div>
+                    <img src="images/flowers4.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>长绸带公主捧花</p>
+                    </div>
+                    <img src="images/flowers5.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>粉色和橘色的搭配，更有层次感</p>
+                    </div>
+                    <img src="images/flowers6.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>莓果蔬食搭配鲜花，更有新意！</p>
+                    </div>
+                    <img src="images/flowers7.png" width="150" height="140"/>
+                </div>
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>飘逸长绸带，让鲜花飘起来</p>
+                    </div>
+                    <img src="images/flowers8.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>以饰品装饰，别具新意</p>
+                    </div>
+                    <img src="images/flowers9.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+                <div class="container">
+                    <div class="mask">
+
+                    </div>
+                    <div class="text">
+                        <p>❤</p>
+
+                        <p>海星发配，别具巧心</p>
+                    </div>
+                    <img src="images/flowers10.png" width="150" height="140"/>
+                    <!--<div class="mask">-->
+
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="seven">
+        <div id="one-screen-HQ">
+            <div>
+                <img src="images/ScreenClip13.png" width="1200px" height="662px" alt=""/>
+            </div>
+            <div id="one-1">
+                <img src="images/ScreenClip2.png" alt=""/>
+            </div>
+            <div id="one-2">
+                <img src="images/one-06.jpg" alt=""/>
+            </div>
+            <div id="one-3">
+                <img src="images/ScreenClip5.png" alt=""/>
+            </div>
+            <div id="one-4">
+                <img src="images/ScreenClip4.png" alt=""/>
+            </div>
+            <div id="one-9">
+                <img src="images/ScreenClip9.png" alt=""/>
+            </div>
+            <div id="one-5">
+                <img src="images/ScreenClip3.png" alt=""/>
+            </div>
+            <div id="one-6">
+                <img src="images/ScreenClip6.png" alt=""/>
+            </div>
+            <div id="one-7">
+                <img src="images/ScreenClip7.png" alt=""/>
+            </div>
+            <div id="one-8">
+                <img src="images/ScreenClip8.png" alt=""/>
+            </div>
+
+            <div id="one-10">
+                <img src="images/ScreenClip10.png" alt=""/>
+            </div>
+            <div id="one-11">
+                <img src="images/ScreenClip11.png" alt=""/>
+            </div>
+            <div id="one-12">
+                <img src="images/ScreenClip12.png" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="six">
+        <div class="ctt">
+            <div class="main">
+                <ul>
+                    <li>
+                        <div class="photo"><img src="images/c-1.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>蔷薇之恋</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                            ></a></div>
+                    </li>
+                    <li>
+                        <div class="photo"><img src="images/c-2.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>小确幸</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                        </a></div>
+                    </li>
+                    <li>
+                        <div class="photo"><img src="images/c-3.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>暮色蜜语</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                        </a></div>
+                    </li>
+                    <li>
+                        <div class="photo"><img src="images/c-4.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>十足趣味</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                        </a></div>
+                    </li>
+                    <li>
+                        <div class="photo"><img src="images/c-5.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>人间四月天</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                        </a></div>
+                    </li>
+                    <li>
+                        <div class="photo"><img src="images/c-6.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>我们的约会</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                        </a></div>
+                    </li>
+                    <li>
+                        <div class="photo"><img src="images/c-7.jpg"/></div>
+                        <div class="rsp"></div>
+                        <div class="text"><a href=""><h3>主君的午餐</h3>
+
+                            <div>POST TIME :2016.05.20</div>
+                        </a></div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="four">
+        <div id="jzp">
+            <ul id="imgList">
+                <li><img src="images/jzp_20160506200544021.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160508151609433.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160426203700803.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160420164729174.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160420164622391.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160408191525570.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160404193330587.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160404193231086.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160404193114616.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20160404192854379.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20151103101308493.jpg">
+                    <ins></ins>
+                </li>
+                <li><img src="images/jzp_20151103100947818.jpg">
+                    <ins></ins>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" id="two">
+        <div id="hsj">
+            <div id="link" class="clearfix">
+                <h2><img id="linkQq" src="images/bg25.gif" title="米兰在线咨询"/></h2>
+
+                <h2 id="weixin"><img src="images/bg26.gif" title="米兰微信"/></h2>
+            </div>
+            <div class="box">
+                <ul class="clearfix">
+                    <li id="dAqq" style="display: block;">
+                        <div id="wrap" class="clearfix">
+                            <div id="receiveText">
+                                <textarea name="" id="receive" cols="30" rows="10"></textarea>
+                            </div>
+                            <div id="useText" class="clearfix">
+                                <textarea name="" id="showText" cols="30" rows="10"></textarea>
+                            </div>
+                            <div id="send">
+                                <input id="sendBtn" type="button" value="发送"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="dAweixin">
+                        <img src="images/dawx1.png" alt=""/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="eight">
+        <div class="wangorzhang">
+            <div id="wangQiang">
+                <div class="bld-bigImg">
+                    <ul>
+                        <li><img height="600" src="images/1.jpg" alt="11"/></li>
+                        <li><img height="600" src="images/2.jpg" alt="2"/></li>
+                        <li><img height="600" src="images/3.jpg" alt="3"/></li>
+                        <li><img height="600" src="images/4.jpg" alt="4"/></li>
+                        <li><img height="600" src="images/5.jpg" alt="5"/></li>
+                        <li><img height="600" src="images/6.jpg" alt="6"/></li>
+                        <li><img height="600" src="images/7.jpg" alt="7"/></li>
+                        <li><img height="600" src="images/8.jpg" alt="8"/></li>
+                        <li><img height="600" src="images/9.jpg" alt="9"/></li>
+                        <li><img height="600" src="images/10.jpg" alt="10"/></li>
+                        <li><img height="600" src="images/11.jpg" alt="11"/></li>
+                    </ul>
+                </div>
+
+                <div class="bld-smallImg">
+                    <div class="leftArrow" id="leftArrow"><span>&lt;</span></div>
+                    <div class="centerImg wrap" id="centerImg">
+                        <ul>
+                            <li><img src="images/1.jpg" alt="1"/></li>
+                            <li><img src="images/2.jpg" alt="2"/></li>
+                            <li><img src="images/3.jpg" alt="3"/></li>
+                            <li><img src="images/4.jpg" alt="4"/></li>
+                            <li><img src="images/5.jpg" alt="5"/></li>
+                            <li><img src="images/6.jpg" alt="6"/></li>
+                            <li><img src="images/7.jpg" alt="7"/></li>
+                            <li><img src="images/8.jpg" alt="8"/></li>
+                            <li><img src="images/9.jpg" alt="9"/></li>
+                            <li><img src="images/10.jpg" alt="10"/></li>
+                            <li><img src="images/11.jpg" alt="11"/></li>
+                        </ul>
+                    </div>
+                    <div class="rightArrow" id="rightArrow"><span>&gt;</span></div>
+                </div>
+            </div>
+
+            <div id="zhangShuxian">
+
+                <div id="footer">
+                    <dl>
+                        <dt>
+                            <a href="#" target="_blank">ABOUT</a>
+                        </dt>
+                        <dd>
+                            <a href="#" target="_blank">关于我们</a>
+                        </dd>
+                        <dd>
+                            <a href="#" target="_blank">品牌历程</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="#" target="_blank">TEAM</a>
+                        </dt>
+                        <dd>
+                            <a href="#" target="_blank">人才招聘</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="#" target="_blank">WORK</a>
+                        </dt>
+                        <dd>
+                            <a href="#" target="_blank">样片展示</a>
+                        </dd>
+                        <dd>
+                            <a href="#" target="_blank">拍摄基地</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="#" target="_blank">GUEST</a>
+                        </dt>
+                        <dd>
+                            <a href="#" target="_blank">客片大赏</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="#" target="_blank">ACTIVITY</a>
+                        </dt>
+                        <dd>
+                            <a href="#" target="_blank">米兰资讯</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="#" target="_blank">CONTECT</a>
+                        </dt>
+                        <dd>
+                            <a href="#" target="_blank">联系我们</a>
+                        </dd>
+                        <dd>
+                            <a href="#" target="_blank">在线预约</a>
+                        </dd>
+                    </dl>
+                    <h2>
+                        <a href="#" target="_blank">
+                            <img src="images/bg30.gif" alt=""/>
+                        </a>
+                    </h2>
+
+                    <p>版权所有©2007-2016 江西米兰投资有限公司，技术支持 <a href="#" target="_blank">衍艺网络品牌设计中心 武汉网站建设</a> 赣ICP备11008686号-3
+                    </p>
+        <span>
+            <a href="#" target="_blank" title="站长统计">
+                <img src="images/pic.gif" alt=""/>
+            </a>
+        </span>
+
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

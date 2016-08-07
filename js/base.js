@@ -61,7 +61,7 @@ $(function(){
 
 
     var colors = ['#6ed4c0', '#ffffff'];
-    var percent = [95,85,90,95,90,90,75,70,85,80];
+    var percent = [90,90,90,90,90,90,80,80,80,80];
     for (var i = 1; i <= $('.skills-grid').length; i++) {
         var child = document.getElementById('circles-' + i),
             percentage = percent[i-1];
